@@ -1,31 +1,214 @@
-<form method="post" action="http://serveur.com/script.php">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Formulaire CV - Lisandra Almeida</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<p><input type="text" name="Champ_saisie" value="Texte"
-/x/p>
-  
-<p><select name="Liste_Choix" size="3">
-<option value="Option_1">Option_1</option> 
-<option value="option_2">0ption_2</option>
-<option value="Option_3">Option_3</option>
-</ select>
+<style>
+:root {
+    --bg-main: #ddd7d3;
+    --bg-card: #f1efef;
+    --text-dark: #2c2c2c;
+    --accent: #c5beb9;
+}
 
-<textarea name="Zone_Texte" cola="30" rows="5">
-Texte par défaut</textarea></p>
+*{
+    box-sizing:border-box;
+}
 
-<p><input type="checkbox" name="case1" value="Case_1">
-Case à cocher 1<br />
-<input type="checkbox" name="case2" value="Case_2">
-Case à cocher 2<br /></p>
-<input type="checkbox" name="case3" value="Case_3">
-Case à cocher 3<br /></p>
-  
-<p><input type="radio" name="CaseRadio"
-value="Case radio 1">Case radio 1<br />
-<input type=" radio" name="Case_Radio"
-value="Case radio 2">Case radio 2<br />
-<input type="radio" name="Case_Radio"
-value="Case radio 3">Case radio 3<br /×/p>
-  
-<input type="reset" name="Annulation" value="Annuler">
-<input type="submit"name="Soumission" value="Soumettre">
+body{
+    font-family:'Georgia', serif;
+    background:var(--bg-main);
+    padding:40px;
+}
+
+/* Container igual ao teu CV */
+form{
+    background:var(--bg-card);
+    padding:40px 30px;
+    border-radius:15px;
+    max-width:850px;
+    margin:auto;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+h2{
+    margin-top:35px;
+    margin-bottom:15px;
+    color:#8B5E3C;
+}
+
+label{
+    font-weight:bold;
+}
+
+input, textarea, select{
+    width:100%;
+    padding:10px;
+    margin-top:6px;
+    margin-bottom:18px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-family:inherit;
+}
+
+/* Botão igual ao menu do teu CV */
+.submit_btn{
+    background:var(--accent);
+    color:var(--text-dark);
+    border:none;
+    padding:14px;
+    font-size:16px;
+    font-weight:bold;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+    width:100%;
+}
+
+.submit_btn:hover{
+    background:var(--text-dark);
+    color:white;
+    transform:scale(1.03);
+}
+</style>
+</head>
+
+<body>
+
+<form>
+
+<h1>Créer votre CV</h1>
+
+<!-- ================= INFOS PERSO ================= -->
+<h2>Informations personnelles</h2>
+
+<label>Nom</label>
+<input type="text" name="nom" value="Almeida">
+
+<label>Prénom</label>
+<input type="text" name="prenom" value="Lisandra">
+
+<label>Titre professionnel</label>
+<input type="text" name="titre" value="Étudiante en Master Humanités Numériques">
+
+<label>Objectif</label>
+<input type="text" name="objectif" value="Recherche de stage pour Avril 2026">
+
+<label>Photo</label>
+<input type="file" name="photo">
+
+<label>Profil</label>
+<textarea name="profil" rows="4"
+placeholder="Présentation courte..."></textarea>
+
+
+<!-- ================= CONTACT ================= -->
+<h2>Contact</h2>
+
+<label>Ville</label>
+<input type="text" name="ville" value="Pont-Sainte-Maxence, France">
+
+<label>Téléphone</label>
+<input type="tel" name="telephone" value="+33 6 81 37 15 33">
+
+<label>Email</label>
+<input type="email" name="email" value="lisandra.almeida05@gmail.com">
+
+<label>Permis</label>
+<select name="permis">
+<option>B</option>
+<option>Pas de permis</option>
+</select>
+
+
+<!-- ================= EXPERIENCES ================= -->
+<h2>Expérience professionnelle</h2>
+
+<label>Poste 1</label>
+<input type="text" value="Intérimaire">
+
+<label>Période</label>
+<input type="text" value="Fév. 2024 - Juil. 2025">
+
+<label>Lieu</label>
+<input type="text" value="Oise, France">
+
+<label>Description</label>
+<textarea rows="4">Expériences en logistique via Adecco, Synergie et Actual Employment. Préparation de commandes, gestion de stock, rigueur et adaptation.</textarea>
+
+<label>Poste 2</label>
+<input type="text" value="Assistante Ventes">
+
+<label>Période</label>
+<input type="text" value="Oct. 2022 - 2023">
+
+<label>Lieu</label>
+<input type="text" value="Lisbonne, Portugal">
+
+<label>Description</label>
+<textarea rows="4">Encaissements, réassort, assistance clientèle, organisation du magasin.</textarea>
+
+
+<!-- ================= FORMATION ================= -->
+<h2>Formation</h2>
+
+<label>Diplôme</label>
+<input type="text" value="Master Humanités Numériques : Enjeux et Technologies">
+
+<label>Établissement</label>
+<input type="text" value="Université Paris 8">
+
+<label>Période</label>
+<input type="text" value="2025 - 2027">
+
+<label>Licence</label>
+<input type="text" value="Langues, Littératures et Cultures">
+
+<label>Université</label>
+<input type="text" value="Université de Lisbonne">
+
+<label>Période</label>
+<input type="text" value="2019 - 2023">
+
+
+<!-- ================= COMPETENCES ================= -->
+<h2>Compétences</h2>
+
+<label>Hard Skills</label>
+<textarea rows="3">Création et gestion de contenu, veille digitale, analyse des tendances.</textarea>
+
+<label>Soft Skills</label>
+<textarea rows="3">Esprit d’équipe, organisation, adaptabilité, fiabilité, ponctualité.</textarea>
+
+<label>Compétences informatiques</label>
+<textarea rows="3">Réseaux sociaux, Canva, Illustrator, Photoshop</textarea>
+
+
+<!-- ================= LANGUES ================= -->
+<h2>Langues</h2>
+
+<textarea rows="3">Portugais : natif
+Français : C2
+Anglais : C2</textarea>
+
+
+<!-- ================= INTERETS ================= -->
+<h2>Centres d’intérêt</h2>
+
+<textarea rows="3" placeholder="Facultatif..."></textarea>
+
+
+<br>
+<input type="submit" value="Envoyer le CV" class="submit_btn">
+
 </form>
+
+</body>
+</html>
